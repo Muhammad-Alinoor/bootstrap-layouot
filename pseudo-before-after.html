@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use of ::before and ::after</title>
+    <style>
+        h3::before {
+            content: 'hello ';
+            color: darkgoldenrod;
+            text-transform: uppercase;
+        }
+
+        h3::after {
+            content: ' I am your instructor.';
+            color: coral;
+        }
+
+        blockquote::before {
+            content: open-quote;
+            color: tomato;
+            font-size: 1.5em;
+        }
+
+        blockquote::after {
+            content: close-quote;
+            color: tomato;
+            font-size: 1.5em;
+        }
+
+        h2 {
+            display: inline-block;
+        }
+
+        h2::after,
+        h2:hover::before {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: magenta;
+        }
+
+        .star::after {
+            content: 'Name';
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>I am not your teacher.</h3>
+    <section>
+        <h2>Best Quotes</h2>
+        <blockquote>Don't read more and more quotation to waste your time</blockquote>
+        <blockquote>There is nothing in life without working</blockquote>
+        <blockquote>Enjoyment to Sorroness everything is work. </blockquote>
+    </section>
+    <section>
+        <form action="">
+            <p class="star">Name :<input type="email" name="email" placeholder="Your Email address"> </p>
+        </form>
+    </section>
+</body>
+
+</html>
